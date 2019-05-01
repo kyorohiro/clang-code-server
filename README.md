@@ -28,7 +28,11 @@ mkdir /works/w
 ## Install Clang Plugin
 https://code.visualstudio.com/docs/languages/cpp
 
-## (1)
+
+## Build&RUN Hello World
+
+(1) Write Code
+
 ```hello.cpp
 #include<stdio.h>
 
@@ -38,10 +42,9 @@ int main(int argc, char** argv) {
 }
 ```
 
+(2) Terminal -> New Terminal on VSCODE
 
-(1) Terminal -> New Terminal on VSCODE
-
-(2) on Terminal
+(3) on Terminal
 
 ```
 root@59757234cc79:/works/w# g++ hello.cpp
@@ -54,6 +57,22 @@ Hello, World!!root@59757234cc79:/works/w#
 
 
 
+# PS
+
+[a] restart a container
+
+```
+$ docker ps -a
+で ID を調べて、
+$ docker exec -it < id > bash
+```
+
+[b] reset configure which like port and mount etc.
+$ docker commit < id > dart_vscode_xxx
+$ docker run -p 8443:8443 -p 8080:8080 -it clang_vscode_xxx bash
+
+[c] mount volume
+$ docker run -p 8443:8443 -p 8080:8080 -v /Users/kyorohiro/w/dart/xxx:/works/w -it clang_vscode bash
 
 
 
