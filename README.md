@@ -63,7 +63,7 @@ Hello, World!!root@59757234cc79:/works/w#
 
 ```
 $ docker ps -a
-で ID を調べて、
+check id and
 $ docker exec -it < id > bash
 ```
 
