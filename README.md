@@ -68,7 +68,7 @@ $ docker exec -it < id > bash
 ```
 
 [b] reset configure which like port and mount etc.
-$ docker commit < id > dart_vscode_xxx
+$ docker commit < id > clang_vscode_xxx
 $ docker run -p 8443:8443 -p 8080:8080 -it clang_vscode_xxx bash
 
 [c] mount volume
